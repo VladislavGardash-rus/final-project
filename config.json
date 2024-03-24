@@ -1,0 +1,13 @@
+{
+  "thumbnailMode": true,
+  "cacheCapacity": 10,
+  "logger": {
+    "level": "DEBUG",
+    "file": "service.log"
+  },
+  "httpServer": {
+    "port": "4000",
+    "host": "localhost"
+  }
+}
+

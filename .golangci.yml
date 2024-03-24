@@ -1,0 +1,33 @@
+run:
+  tests: false
+
+linters-settings:
+  funlen:
+    lines: 150
+    statements: 80
+  goimports:
+    local-prefixes: github.com/gardashvs/home-work/hw12_13_14_15_calendar
+
+linters:
+  disable-all: false
+  enable-all: false
+  disable:
+    - exhaustive
+    - exhaustivestruct
+    - goerr113
+    - gochecknoglobals
+    - gochecknoinits
+    - godox
+    - gofumpt
+    - gomnd
+    - lll
+    - nakedret
+    - nlreturn
+    - testpackage
+    - wsl
+    - wrapcheck
+    - forbidigo
+    - govet
+    - errcheck
+    - gosimple
+    - ineffassign
