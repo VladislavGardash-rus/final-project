@@ -1,50 +1,44 @@
 name: Otus final project
 
-on:
-  push:
-    branches:
-      - master
-
-env:
-  GO111MODULE: "on"
+on: [push]
 
 jobs:
-  lint:
+  build:
+    name: Build
     runs-on: ubuntu-latest
-    if: ${{ !contains(github.ref, 'final-project') }}
+
     steps:
-      - name: Extract branch name
-        run: echo "BRANCH=${GITHUB_REF#refs/heads/}" >> $GITHUB_ENV
+      - name: Checkout code
+        uses: actions/checkout@v2
 
       - name: Set up Go
-        uses: actions/setup-go@v3
+        uses: actions/setup-go@v2
         with:
-          go-version: ~1.20
+          go-version: '1.20'
 
-      - name: Check out code
-        uses: actions/checkout@v3
+      - name: Build
+        run: go build -v ./...
 
       - name: Linters
         uses: golangci/golangci-lint-action@v3
         with:
           version: v1.50.1
-          working-directory: ${{ env.BRANCH }}
 
-  tests:
+  test:
+    name: Test
     runs-on: ubuntu-latest
-    if: ${{ !contains(github.ref, 'final-project') }}
+
     steps:
-      - name: Extract branch name
-        run: echo "BRANCH=${GITHUB_REF#refs/heads/}" >> $GITHUB_ENV
+      - name: Checkout code
+        uses: actions/checkout@v2
 
       - name: Set up Go
-        uses: actions/setup-go@v3
+        uses: actions/setup-go@v2
         with:
-          go-version: ^1.20
+          go-version: '1.20'
 
-      - name: Check out code
-        uses: actions/checkout@v3
+      - name: Install dependencies
+        run: go mod download
 
-      - name: Unit tests
-        run: go test -v -count=1 -race -timeout=1m ./...
-        working-directory: ${{ env.BRANCH }}
+      - name: Test
+        run: go test ./...
