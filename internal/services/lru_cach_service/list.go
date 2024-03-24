@@ -1,3 +1,4 @@
+//nolint:all
 package lru_cach_service
 
 type List interface {

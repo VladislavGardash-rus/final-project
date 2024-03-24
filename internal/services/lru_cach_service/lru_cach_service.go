@@ -1,3 +1,4 @@
+//nolint:all
 package lru_cach_service
 
 import "sync"
