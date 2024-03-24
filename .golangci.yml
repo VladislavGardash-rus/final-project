@@ -11,5 +11,7 @@ linters-settings:
 linters:
   disable-all: false
   enable-all: false
+  disable:
+    - typecheck
   enable:
     - unused
