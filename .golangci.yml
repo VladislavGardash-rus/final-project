@@ -31,3 +31,4 @@ linters:
     - errcheck
     - gosimple
     - ineffassign
+    - typecheck
