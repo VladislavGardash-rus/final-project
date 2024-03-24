@@ -6,7 +6,7 @@ linters-settings:
     lines: 150
     statements: 80
   goimports:
-    local-prefixes: github.com/gardashvs/home-work/hw12_13_14_15_calendar
+    local-prefixes: github.com/gardashvs/final-project
 
 linters:
   disable-all: false
