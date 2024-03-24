@@ -17,7 +17,7 @@ jobs:
           go-version: '1.20'
 
       - name: Build
-        run: go build -v -o -config ./config.json ./cmd
+        run: go build -v -o ./cmd
 
       - name: Linters
         uses: golangci/golangci-lint-action@v3
