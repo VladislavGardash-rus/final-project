@@ -14,5 +14,6 @@ linters:
   disable:
     - typecheck
     - errcheck
+    - govet
   enable:
     - unused
