@@ -1,0 +1,37 @@
+{
+	"info": {
+		"_postman_id": "6c377b6f-dd8d-4bc2-ab67-d2a3dc0ad020",
+		"name": "previewer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5318345"
+	},
+	"item": [
+		{
+			"name": "get preview",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/fill/100/100/png.pngtree.com/thumb_back/fw800/background/20230612/pngtree-images-of-winter-and-white-background-wallpapers-free-download-image_2935697.jpg",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"fill",
+						"100",
+						"100",
+						"png.pngtree.com",
+						"thumb_back",
+						"fw800",
+						"background",
+						"20230612",
+						"pngtree-images-of-winter-and-white-background-wallpapers-free-download-image_2935697.jpg"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
